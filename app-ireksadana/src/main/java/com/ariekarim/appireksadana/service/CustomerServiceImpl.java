@@ -31,7 +31,7 @@ public class CustomerServiceImpl {
 		return customers;
 	}
 	
-	public List<Customer> getCustomerByCifNumber(String cifCustomer) {
+	public List<Customer> getCustomerByCifNumber(Long cifCustomer) {
 		List<Customer> customers = new ArrayList<>();
 		customers = this.repository.findByCifCustomer(cifCustomer);
 

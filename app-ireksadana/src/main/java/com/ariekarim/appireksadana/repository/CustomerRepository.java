@@ -11,6 +11,6 @@ import com.ariekarim.appireksadana.Domain.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long>{
 	@Nullable
-	public List<Customer> findByCifCustomer(String cifCustomer);
+	public List<Customer> findByCifCustomer(Long cifCustomer);
 	
 }

@@ -6,7 +6,7 @@ import com.ariekarim.appireksadana.Domain.Customer;
 
 public class CustomerResponse {
 	private UUID idCustomer;
-	private String cifNumberCustomer;
+	private Long cifNumberCustomer;
 	private String firstNameCustomer;
 	private String middleNameCustomer;
 	private String lastNameCustomer;
@@ -35,11 +35,11 @@ public class CustomerResponse {
 		this.idCustomer = idCustomer;
 	}
 
-	public String getCifNumberCustomer() {
+	public Long getCifNumberCustomer() {
 		return cifNumberCustomer;
 	}
 
-	public void setCifNumberCustomer(String cifNumberCustomer) {
+	public void setCifNumberCustomer(Long cifNumberCustomer) {
 		this.cifNumberCustomer = cifNumberCustomer;
 	}
 

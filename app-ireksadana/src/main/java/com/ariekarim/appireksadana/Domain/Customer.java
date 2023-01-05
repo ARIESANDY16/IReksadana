@@ -12,9 +12,10 @@ import com.ariekarim.appireksadana.dto.CustomerRequest;
 @Table(name = "customer")
 public class Customer {
 	
-	@Id
+	
 	private UUID idCustomer;
-	private String cifCustomer;
+	@Id
+	private Long cifCustomer;
 	private String emailCustomer;
 	private String firstNameCustomer;
 	private String middleNameCustomer;
@@ -63,10 +64,10 @@ public class Customer {
 	public void setEmailCustomer(String emailCustomer) {
 		this.emailCustomer = emailCustomer;
 	}
-	public String getCifCustomer() {
+	public Long getCifCustomer() {
 		return cifCustomer;
 	}
-	public void setCifCustomer(String cifCustomer) {
+	public void setCifCustomer(Long cifCustomer) {
 		this.cifCustomer = cifCustomer;
 	}
 	public String getGenderCustomer() {

@@ -2,7 +2,7 @@ package com.ariekarim.appireksadana.dto;
 
 public class CustomerRequest {
 	
-	private String cifCustomer;
+	private Long cifCustomer;
 	private String firstNameCustomer;
 	private String middleNameCustomer;
 	private String lastNameCustomer;
@@ -13,10 +13,10 @@ public class CustomerRequest {
 		this.middleNameCustomer = null;
 		this.lastNameCustomer = null;
 	}
-	public String getCifCustomer() {
+	public Long getCifCustomer() {
 		return cifCustomer;
 	}
-	public void setCifCustomer(String cifCustomer) {
+	public void setCifCustomer(Long cifCustomer) {
 		this.cifCustomer = cifCustomer;
 	}
 	public String getFirstNameCustomer() {

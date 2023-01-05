@@ -48,12 +48,19 @@ public class CustomerController {
 	}
 	
 	@RequestMapping(method= {RequestMethod.DELETE}, value= {"/deleteCustomerById/{id}"})
-	public void deleteCustomer(@PathVariable Long id) {
-		this.customerService.deleteCustomer(id);
+	public APIResult deleteCustomer(@PathVariable Long id) {
+		try {
+			this.customerService.deleteCustomer(id);
+		} catch(Exception e){
+			System.out.println(e.getMessage());
+			errCode = ErrorCode.COMMON_ERROR;
+			result = new APIResult(errCode);
+		}
+		return result;
 	}
 	
 	@RequestMapping("/customers/{cifCustomer}")
-	public List<Customer> getCustomer(@PathVariable String cifCustomer) {
+	public List<Customer> getCustomer(@PathVariable Long cifCustomer) {
 		return this.customerService.getCustomerByCifNumber(cifCustomer);
 	}
 

@@ -29,7 +29,7 @@ public class CustomerService {
 		repo.deleteById(id);
 	}
 	
-	public List<Customer> getCustomerByCifNumber(String cifCustomer) {
+	public List<Customer> getCustomerByCifNumber(Long cifCustomer) {
 		return this.service.getCustomerByCifNumber(cifCustomer);
 	}
 
